@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color ="secondary">
+    <ion-title style="text-align: center">
+      ERP USER
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <button   ion-item *ngFor= "let item of items; let i = index" (click)="toggleSection(i)">
+      <ion-list-header no-lines>
+        {{item.title}}
+        <ion-icon  [name]="item.icon" item-start></ion-icon>
+        <ion-icon name="arrow-dropright" *ngIf="!item.open" item-end></ion-icon>
+        <ion-icon name="arrow-dropdown" *ngIf="item.open" item-end></ion-icon>
+      </ion-list-header>
+
+     <!-- <div item-right>
+        {{item.quantity}}
+      </div>-->
+      <div   *ngIf="item.open">
+      <!--  <button ion-button color="primary" >Total</button>
+        <button ion-button color="secondary" >Available</button>
+        <button ion-button color="danger" >delivered</button>-->
+        <div style="float: left">
+          <h1 style="text-align: center">60</h1>
+          <h6 style="text-align: center">TOTAL</h6>
+        </div>
+        <div style="float: left; margin-left: 27%">
+          <h1 style="text-align: center" >40</h1>
+          <h6 style="text-align: center">AVAILABLE</h6>
+        </div>
+        <div style="float: right">
+
+          <h1 style="text-align: center"  >20</h1>
+          <h6 style="text-align: center">DELIVERED</h6>
+        </div>
+
+      </div>
+    </button>
+
+
+  </ion-list>
+
+</ion-content>

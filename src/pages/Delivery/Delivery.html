@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="crimson">
+    <ion-title style="text-align: center">
+      ERP USER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<button ion-item *ngFor="let title of titles;let i=index" (click)="toggle()">
+  <ion-icon name="information-circle" item-start></ion-icon>
+    {{title}}
+  <ion-icon name="arrow-dropright" item-end></ion-icon>
+
+</button>
+
+</ion-content>
